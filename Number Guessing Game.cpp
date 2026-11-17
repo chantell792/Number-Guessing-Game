@@ -14,5 +14,26 @@ int main()
     int targetNumber;
     int guess;
     int guessCounter = 0;
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(lowerLimit, upperLimit);
+    targetNumber = dis(gen);
+
+    while (guess != targetNumber)
+    {
+        std::cout << "Enter your guess number between " << lowerLimit << " and " << upperLimit << ": ";
+        std::cin >> guess;
+        guessCounter++;
+    }
+    if (guess > targetNumber)
+    {
+        std::cout << "Too high, try againn";
+    }
+    else if (guess < targetNumber)
+    {
+        std::cout << "Too low, try again.\n";
+    }
+}
     return 0;
 }

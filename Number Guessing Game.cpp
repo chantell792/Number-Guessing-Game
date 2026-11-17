@@ -34,6 +34,10 @@ int main()
     {
         std::cout << "Too low, try again.\n";
     }
-}
+    else
+    {
+        std::cout << "You guessed it. Congratulations!";
+        std::cout << "Total number of guesses: " << guessCounter << std::endl;
+    }
     return 0;
 }

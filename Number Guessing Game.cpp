@@ -25,7 +25,7 @@ int main()
         std::cout << "Enter your guess number between " << lowerLimit << " and " << upperLimit << ": ";
         std::cin >> guess;
         guessCounter++;
-    
+    }
     if (guess > targetNumber)
     {
         std::cout << "Too high, try againn";

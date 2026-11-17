@@ -12,7 +12,7 @@ int main()
     const int lowerLimit = 1;
     const int upperLimit = 20;
     int targetNumber;
-    int guess;
+    int guess = 0;
     int guessCounter = 0;
 
     std::random_device rd;
@@ -25,7 +25,7 @@ int main()
         std::cout << "Enter your guess number between " << lowerLimit << " and " << upperLimit << ": ";
         std::cin >> guess;
         guessCounter++;
-    }
+    
     if (guess > targetNumber)
     {
         std::cout << "Too high, try againn";
